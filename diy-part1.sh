@@ -20,5 +20,5 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i '$a src-git kenzo https://github.com/V2RaySSR/openwrt-packages' feeds.conf.default
 sed -i '$a src-git small https://github.com/V2RaySSR/small' feeds.conf.default
 #hellowaorld
-git clone https://github.com/jerrykuku/lua-maxminddb.git  package/learn/
-git clone https://github.com/jerrykuku/luci-app-vssr.git  package/learn/
+git clone https://github.com/jerrykuku/lua-maxminddb.git  package/learn/lua-maxminddb
+git clone https://github.com/jerrykuku/luci-app-vssr.git  package/learn/luci-app-vssr
