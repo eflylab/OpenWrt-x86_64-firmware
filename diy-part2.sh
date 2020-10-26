@@ -12,3 +12,16 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.3.251/g' package/base-files/files/bin/config_generate
+# Test modify name
+sed -i 's/LuCI/Fengyan/g' package/lean/default-settings/Makefile
+# 主机名
+sed -i 's/OpenWrt/YLede/g' package/base-files/files/bin/config_generate
+
+#删除默认密码
+sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/lean/default-settings/files/zzz-default-settings
+
+#更改时区
+sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+#更新feeds
+./scripts/feeds update -a
+./scripts/feeds install -a
